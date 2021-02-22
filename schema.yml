@@ -1,0 +1,94 @@
+info:
+  description: 'Meme Stream APIs'
+  title: ''
+  version: ''
+openapi: 3.0.0
+paths:
+  /api/:
+    get:
+      operationId: api_list
+      tags:
+      - api
+  /memefilters/byDateRange:
+    post:
+      operationId: memefilters_byDateRange
+      tags:
+      - memefilters
+  /memefilters/byName:
+    post:
+      operationId: memefilters_byName
+      tags:
+      - memefilters
+  /memefilters/createMeme:
+    post:
+      operationId: memefilters_createMeme
+      tags:
+      - memefilters
+  /memefilters/getAllMemes:
+    get:
+      operationId: memefilters_getAllMemes
+      tags:
+      - memefilters
+  /memefilters/{id}/getMeme:
+    get:
+      operationId: memefilters_getMeme
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - memefilters
+  /memefilters/{id}/updateMeme:
+    patch:
+      operationId: memefilters_updateMeme
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - memefilters
+  /memes:
+    get:
+      operationId: memes_list
+      tags:
+      - memes
+    post:
+      operationId: memes_create
+      tags:
+      - memes
+  /memes/{id}:
+    get:
+      operationId: memes_read
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - memes
+    patch:
+      operationId: memes_partial_update
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - memes
+servers:
+- url: 
+    
